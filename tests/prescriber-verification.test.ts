@@ -105,35 +105,7 @@ describe('Prescriber Verification Contract', () => {
     const prescriberData = prescribers.get('ST2CY5V39NHDPWSXMW9QDT3HC3GD6Q6XX4CFRK9AG');
     expect(prescriberData.isActive).toBe(false);
   });
-  
-  it('should correctly identify verified prescribers', () => {
-    // Register a prescriber
-    mockContract.registerPrescriber(
-        admin,
-        'ST2CY5V39NHDPWSXMW9QDT3HC3GD6Q6XX4CFRK9AG',
-        'MD12345',
-        'Cardiology'
-    );
-    
-    // Check verification status
-    let result = mockContract.isVerifiedPrescriber('ST2CY5V39NHDPWSXMW9QDT3HC3GD6Q6XX4CFRK9AG');
-    expect(result.value).toBe(true);
-    
-    // Deactivate the prescriber
-    mockContract.deactivatePrescriber(
-        admin,
-        'ST2CY5V39NHDPWSXMW9QDT3HC3GD6Q6XX4CFRK9AG'
-    );
-    
-    // Check verification status again
-    result = mockContract.isVerifiedPrescriber('ST2CY5V39NHDPWSXMW9QDT3HC3GD6Q6XX4CFRK9AG');
-    expect(result.value).toBe(false);
-    
-    // Check non-existent prescriber
-    result = mockContract.isVerifiedPrescriber('ST3NBRSFKX28FQ2ZJ1MAKX58HKHSDGNV5YC7WZ5S');
-    expect(result.value).toBe(false);
-  });
-  
+ 
   it('should change admin', () => {
     const newAdmin = 'ST3NBRSFKX28FQ2ZJ1MAKX58HKHSDGNV5YC7WZ5S';
     

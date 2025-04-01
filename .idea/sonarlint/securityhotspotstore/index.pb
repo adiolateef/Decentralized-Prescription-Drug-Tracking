@@ -7,3 +7,5 @@ S
 #contracts/patient-verification.clar,a/5/a53a8fcc82ce2eb7cfe61ba821429022b36b1494
 U
 %tests/prescriber-verification.test.ts,d/c/dc638888154664de96c4d687f27cc27464e231b1
+R
+"tests/patient-verification.test.ts,3/1/31435329f12c9f5d6fd90ae01ab028cbfc75c763
